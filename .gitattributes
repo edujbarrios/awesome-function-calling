@@ -1,0 +1,29 @@
+# ─────────────────────────────────────────────────────────────
+# awesome-function-calling — .gitattributes
+# Ensures GitHub linguist correctly identifies project languages
+# and normalises line endings across all platforms.
+# ─────────────────────────────────────────────────────────────
+
+# Global line-ending normalisation
+* text=auto
+
+# ── Language overrides ────────────────────────────────────────
+*.json       linguist-language=JSON
+*.py         linguist-language=Python
+*.md         linguist-language=Markdown
+*.txt        linguist-language=Text
+
+# ── Explicit detectable sources ───────────────────────────────
+src/**/*.py      linguist-detectable=true
+examples/**/*.py linguist-detectable=true
+
+# ── Documentation & config — not counted as code ─────────────
+*.md  linguist-documentation=true
+LICENSE linguist-documentation=true
+
+# ── Binary files — diff as binary ─────────────────────────────
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary

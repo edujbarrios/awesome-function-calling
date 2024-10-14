@@ -1,0 +1,11 @@
+# awesome-function-calling — dependencies
+#
+# The core library and demo run entirely on the Python 3.8+
+# standard library (json, random, pathlib, sys, os).
+# No third-party packages are required to run the demo.
+#
+# Optional development / tooling dependencies:
+# ─────────────────────────────────────────────
+# pytest>=7.4.0          # unit testing
+# black>=23.0.0           # code formatting
+# ruff>=0.1.0             # fast linting
