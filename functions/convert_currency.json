@@ -1,0 +1,23 @@
+{
+  "name": "convert_currency",
+  "description": "Converts a monetary amount from one currency to another using up-to-date exchange rates.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "amount": {
+        "type": "number",
+        "description": "The numeric amount to convert. Must be greater than 0.",
+        "exclusiveMinimum": 0
+      },
+      "from_currency": {
+        "type": "string",
+        "description": "Source currency code following ISO 4217, e.g. 'USD', 'GBP', 'JPY'."
+      },
+      "to_currency": {
+        "type": "string",
+        "description": "Target currency code following ISO 4217, e.g. 'EUR', 'CAD', 'CNY'."
+      }
+    },
+    "required": ["amount", "from_currency", "to_currency"]
+  }
+}

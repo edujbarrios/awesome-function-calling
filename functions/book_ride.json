@@ -1,0 +1,42 @@
+{
+  "name": "book_ride",
+  "description": "Books a ride-hailing trip from a pickup address to a destination with support for scheduling and ride types.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "pickup_location": {
+        "type": "string",
+        "description": "Full address or landmark for the pickup point."
+      },
+      "destination": {
+        "type": "string",
+        "description": "Full address or landmark for the drop-off point."
+      },
+      "ride_type": {
+        "type": "string",
+        "enum": ["economy", "comfort", "xl", "premium"],
+        "description": "Category of ride to book. Defaults to 'economy'.",
+        "default": "economy"
+      },
+      "scheduled_time": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Schedule the booking for a future time (ISO 8601). Omit for immediate pickup."
+      },
+      "payment_method": {
+        "type": "string",
+        "enum": ["card", "cash", "wallet"],
+        "description": "Preferred payment method. Defaults to 'card'.",
+        "default": "card"
+      },
+      "num_passengers": {
+        "type": "integer",
+        "description": "Number of passengers. Defaults to 1.",
+        "minimum": 1,
+        "maximum": 8,
+        "default": 1
+      }
+    },
+    "required": ["pickup_location", "destination"]
+  }
+}

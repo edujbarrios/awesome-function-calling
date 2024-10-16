@@ -1,0 +1,43 @@
+{
+  "name": "get_directions",
+  "description": "Calculates turn-by-turn directions between two locations with support for driving, walking, cycling, and transit.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "origin": {
+        "type": "string",
+        "description": "Starting address, landmark, or coordinates in 'lat,lon' format."
+      },
+      "destination": {
+        "type": "string",
+        "description": "Destination address, landmark, or coordinates in 'lat,lon' format."
+      },
+      "mode": {
+        "type": "string",
+        "enum": ["driving", "walking", "cycling", "transit"],
+        "description": "Mode of travel. Defaults to 'driving'.",
+        "default": "driving"
+      },
+      "avoid": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["tolls", "highways", "ferries"]
+        },
+        "description": "Optional list of route features to avoid."
+      },
+      "units": {
+        "type": "string",
+        "enum": ["metric", "imperial"],
+        "description": "Distance unit system. Defaults to 'metric'.",
+        "default": "metric"
+      },
+      "departure_time": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Planned departure time (ISO 8601). Used for transit schedules and traffic estimation."
+      }
+    },
+    "required": ["origin", "destination"]
+  }
+}

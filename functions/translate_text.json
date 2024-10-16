@@ -1,0 +1,28 @@
+{
+  "name": "translate_text",
+  "description": "Translates a block of text from one language to another using a neural machine translation engine.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "The text content to translate. Maximum 5000 characters per request."
+      },
+      "to_language": {
+        "type": "string",
+        "description": "Target language as an ISO 639-1 code, e.g. 'es', 'fr', 'de', 'zh', 'ja'."
+      },
+      "from_language": {
+        "type": "string",
+        "description": "Source language code. Use 'auto' for automatic detection. Defaults to 'auto'.",
+        "default": "auto"
+      },
+      "preserve_formatting": {
+        "type": "boolean",
+        "description": "Preserve line breaks and basic Markdown formatting in the output. Defaults to true.",
+        "default": true
+      }
+    },
+    "required": ["text", "to_language"]
+  }
+}

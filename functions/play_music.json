@@ -1,0 +1,43 @@
+{
+  "name": "play_music",
+  "description": "Plays a specific song, album, artist, or playlist on the user's connected music streaming service.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "track": {
+        "type": "string",
+        "description": "Name of the song or track to play."
+      },
+      "artist": {
+        "type": "string",
+        "description": "Name of the artist or band."
+      },
+      "album": {
+        "type": "string",
+        "description": "Name of the album to play."
+      },
+      "playlist": {
+        "type": "string",
+        "description": "Name or ID of a playlist to start."
+      },
+      "service": {
+        "type": "string",
+        "enum": ["spotify", "apple_music", "youtube_music", "deezer", "default"],
+        "description": "Music streaming service to use. Defaults to the user's configured service.",
+        "default": "default"
+      },
+      "shuffle": {
+        "type": "boolean",
+        "description": "Whether to play in shuffle mode. Defaults to false.",
+        "default": false
+      },
+      "volume": {
+        "type": "integer",
+        "description": "Playback volume (0–100). Omit to keep the current volume.",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "required": []
+  }
+}

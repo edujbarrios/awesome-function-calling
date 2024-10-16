@@ -1,0 +1,36 @@
+{
+  "name": "search_news",
+  "description": "Searches for recent news articles matching a query with optional filters for language and date range.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Keywords or a phrase to search for in news headlines and content."
+      },
+      "language": {
+        "type": "string",
+        "description": "ISO 639-1 language code to filter results, e.g. 'en', 'es', 'fr'. Defaults to 'en'.",
+        "default": "en"
+      },
+      "max_results": {
+        "type": "integer",
+        "description": "Maximum number of articles to return (1–20). Defaults to 5.",
+        "minimum": 1,
+        "maximum": 20,
+        "default": 5
+      },
+      "from_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Start date for filtering articles (inclusive), in YYYY-MM-DD format."
+      },
+      "to_date": {
+        "type": "string",
+        "format": "date",
+        "description": "End date for filtering articles (inclusive), in YYYY-MM-DD format."
+      }
+    },
+    "required": ["query"]
+  }
+}

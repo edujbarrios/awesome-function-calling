@@ -1,0 +1,31 @@
+{
+  "name": "set_reminder",
+  "description": "Sets a one-time or recurring reminder for the user, delivered via the specified notification channel.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "description": "The reminder message or note to deliver to the user."
+      },
+      "remind_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "The exact date and time to trigger the reminder in ISO 8601 format."
+      },
+      "recurrence": {
+        "type": "string",
+        "enum": ["none", "daily", "weekly", "monthly"],
+        "description": "How often the reminder repeats. Defaults to 'none' (one-time).",
+        "default": "none"
+      },
+      "channel": {
+        "type": "string",
+        "enum": ["push", "email", "sms", "in-app"],
+        "description": "Delivery channel for the reminder. Defaults to 'push'.",
+        "default": "push"
+      }
+    },
+    "required": ["message", "remind_at"]
+  }
+}

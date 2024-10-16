@@ -1,0 +1,20 @@
+{
+  "name": "track_order",
+  "description": "Retrieves the current shipping status, location, and estimated delivery date for an order.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "type": "string",
+        "description": "The unique order identifier, e.g. 'ORD-98765'."
+      },
+      "carrier": {
+        "type": "string",
+        "enum": ["fedex", "ups", "dhl", "usps", "amazon", "auto"],
+        "description": "Shipping carrier. Use 'auto' to infer from the order ID. Defaults to 'auto'.",
+        "default": "auto"
+      }
+    },
+    "required": ["order_id"]
+  }
+}

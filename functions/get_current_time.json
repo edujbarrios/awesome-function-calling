@@ -1,0 +1,20 @@
+{
+  "name": "get_current_time",
+  "description": "Returns the current date and time for a specified timezone or the user's local timezone.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "timezone": {
+        "type": "string",
+        "description": "A valid IANA timezone identifier, e.g. 'America/New_York', 'Europe/Madrid', 'Asia/Tokyo'."
+      },
+      "format": {
+        "type": "string",
+        "enum": ["iso8601", "unix", "human"],
+        "description": "Output format for the datetime value. Defaults to 'iso8601'.",
+        "default": "iso8601"
+      }
+    },
+    "required": ["timezone"]
+  }
+}

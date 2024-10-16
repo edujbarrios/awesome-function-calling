@@ -1,0 +1,27 @@
+{
+  "name": "get_weather",
+  "description": "Retrieves current weather conditions and an optional multi-day forecast for a given location.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "location": {
+        "type": "string",
+        "description": "The city and country or state, e.g. 'Barcelona, Spain' or 'Austin, TX'."
+      },
+      "unit": {
+        "type": "string",
+        "enum": ["celsius", "fahrenheit"],
+        "description": "Temperature unit to use in the response. Defaults to 'celsius'.",
+        "default": "celsius"
+      },
+      "forecast_days": {
+        "type": "integer",
+        "description": "Number of forecast days to return (1–7). Defaults to 1.",
+        "minimum": 1,
+        "maximum": 7,
+        "default": 1
+      }
+    },
+    "required": ["location"]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "summarize_text",
+  "description": "Generates a concise, coherent summary of a long piece of text while preserving its key ideas and conclusions.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "The full text content to summarize. Should be at least 100 characters."
+      },
+      "max_length": {
+        "type": "integer",
+        "description": "Maximum length of the summary in words. Defaults to 100.",
+        "minimum": 10,
+        "maximum": 500,
+        "default": 100
+      },
+      "style": {
+        "type": "string",
+        "enum": ["bullet_points", "paragraph", "tldr"],
+        "description": "Desired output format for the summary. Defaults to 'paragraph'.",
+        "default": "paragraph"
+      },
+      "focus": {
+        "type": "string",
+        "description": "Optional topic or aspect to emphasise in the summary, e.g. 'financial implications'."
+      }
+    },
+    "required": ["text"]
+  }
+}
