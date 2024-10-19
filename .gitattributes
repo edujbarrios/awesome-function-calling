@@ -14,11 +14,13 @@
 *.txt        linguist-language=Text
 
 # ── Explicit detectable sources ───────────────────────────────
+# JSON is not detectable by default — mark it explicitly so
+# GitHub Linguist counts it in the repository language bar.
+functions/*.json linguist-detectable=true
 src/**/*.py      linguist-detectable=true
 examples/**/*.py linguist-detectable=true
 
 # ── Documentation & config — not counted as code ─────────────
-*.md  linguist-documentation=true
 LICENSE linguist-documentation=true
 
 # ── Binary files — diff as binary ─────────────────────────────
