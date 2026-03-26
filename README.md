@@ -155,14 +155,8 @@ If you use this catalog in your research, project, or product, please cite it as
 @misc{barrios2024awesomefunctioncalling,
   author       = {Eduardo J. Barrios},
   title        = {awesome-function-calling: A curated catalog of LLM function/tool definitions in JSON Schema format},
-  year         = {2024},
+  year         = {2026},
   publisher    = {GitHub},
   howpublished = {\url{https://github.com/edujbarrios/awesome-function-calling}}
 }
 ```
-
-Or in plain text:
-
-> Eduardo J. Barrios. *awesome-function-calling*. GitHub, 2024.  
-> https://github.com/edujbarrios/awesome-function-calling
-
