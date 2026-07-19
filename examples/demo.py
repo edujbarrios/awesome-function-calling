@@ -53,6 +53,7 @@ if __name__ == "__main__":
         "How do I get from Atocha station to Barajas airport?",
         "Summarise this long document for me",
         "What is Tesla's stock price right now?",
+        "Find recent X posts about open-source AI",
     ]
     for q in queries:
         run_single(q)
