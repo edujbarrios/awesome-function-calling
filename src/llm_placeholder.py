@@ -213,6 +213,7 @@ KEYWORD_MAP: Dict[str, List[str]] = {
     "send_email":       ["email", "mail", " send", "compose", "message", "inbox", "recipient"],
     "track_order":      ["order", "track", "delivery", "shipment", "package", "parcel", "shipping"],
     "web_search":       ["search", "find", "look up", "google", "query", "browse", "internet"],
+    "search_x_posts":   ["x post", "x posts", "twitter", "tweet", "tweets", "hashtag", "from:"],
     "create_event":     ["event", "calendar", "schedule", "meeting", "appointment", "book a slot"],
     "book_ride":        ["ride", "taxi", "uber", "cab", "transport", "car", "driver", "pick me up"],
     "play_music":       ["music", "song", "play", "track", "album", "artist", "listen", "spotify"],
@@ -319,6 +320,19 @@ MOCK_RESPONSES: Dict[str, MockHandler] = {
             {"rank": 3, "title": "Official documentation and standards",  "url": "https://example.com/r3", "snippet": "Formal specification and reference for the topic."},
         ],
         "total_results": 3,
+    },
+    "search_x_posts": lambda a: {
+        "query": a.get("query", ""),
+        "source": "Xquik",
+        "posts": [
+            {
+                "id": "1840000000000000001",
+                "author": "@example",
+                "text": "Mock X post matching the requested query.",
+                "url": "https://x.com/example/status/1840000000000000001",
+            },
+        ],
+        "total_results": 1,
     },
     "create_event": lambda a: {
         "event_id":  "evt_a1b2c3d4e5f6",

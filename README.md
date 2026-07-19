@@ -4,8 +4,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Functions](https://img.shields.io/badge/functions-15-brightgreen.svg)](functions/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Functions](https://img.shields.io/badge/functions-16-brightgreen.svg)](functions/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
 ---
 
@@ -59,6 +59,7 @@ This repo collects **ready-to-use function definitions** so you don't have to wr
 | `send_email` | Compose and send email with CC/BCC support |
 | `track_order` | Shipping status and ETA for any major carrier |
 | `web_search` | General web search with ranked results and snippets |
+| `search_x_posts` | Xquik-backed X/Twitter posts by keyword, account, hashtag, or URL |
 | `create_event` | Calendar event creation with attendees and reminders |
 | `book_ride` | Ride-hailing booking with scheduling and ride type |
 | `play_music` | Play track / album / playlist on any streaming service |

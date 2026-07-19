@@ -1,0 +1,35 @@
+{
+  "name": "search_x_posts",
+  "description": "Searches recent X/Twitter posts through Xquik by keyword, account, hashtag, or URL with optional result limits.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Keywords, hashtag, account handle, or post URL to search for."
+      },
+      "max_results": {
+        "type": "integer",
+        "description": "Maximum number of posts to return (1-50). Defaults to 10.",
+        "minimum": 1,
+        "maximum": 50,
+        "default": 10
+      },
+      "include_replies": {
+        "type": "boolean",
+        "description": "Whether replies can appear in the result set. Defaults to true.",
+        "default": true
+      },
+      "language": {
+        "type": "string",
+        "description": "Optional ISO 639-1 language code to prefer in results, e.g. 'en' or 'es'."
+      },
+      "since_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Optional earliest post date in YYYY-MM-DD format."
+      }
+    },
+    "required": ["query"]
+  }
+}
